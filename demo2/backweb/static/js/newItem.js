@@ -91,7 +91,7 @@ function newIt() {
     // var newRow = "<tr><td><input type='checkbox' name='test'></td><td>" + id + "</td><td>" + name + "</td><td>" + jianjie + "</td><td style='text-overflow: ellipsis;overflow: hidden;'nowrap>" + banji + "</td><td>" + teacher + "</td></tr>";
     // $("#newItem").append(newRow);
 
-    var newRow = "<tr><td><input type='checkbox' name='test'></td><td id='item-ID'>" + id + "</td><td>" + name + "</td><td>" + jianjie + "</td><td style='text-overflow: ellipsis;overflow: hidden;'nowrap>" + banji + "</td><td>" + teacher + "</td><td id='item1-form'><form action='/upload/' method='post' enctype='multipart/form-data'><input type='file' name='fileLoc'><input type='submit'></form></td></tr>";
+    var newRow = "<tr><td><input type='checkbox' name='test'></td><td id='item-ID'>" + id + "</td><td>" + name + "</td><td>" + jianjie + "</td><td style='text-overflow: ellipsis;overflow: hidden;'nowrap>" + banji + "</td><td>" + teacher + "</td><td><input type='file' name='image' accept='.rar,.zip,.jpg' onchange='uploadImg()'></td></tr>";
     $("#newItem").append(newRow);
 
     // after添加在tbody后面第一个，append追加在最后
@@ -128,3 +128,30 @@ function deleteIt() {
 function resetIt() {
     $("input").val("");
 }
+
+function uploadImg(event) {
+    var e = window.event || event;
+    // 获取当前文件
+    var oFile = e.target.files[0];
+    console.log(oFile)
+    // $.post("back_dealdata", oFile,function(result){
+    //     console.log(result)
+    // })
+    var formData = new FormData();
+
+    // formData.append('file', $('#file')[0].files[0]);
+    formData.append('file',oFile)
+    $.ajax({
+        type: "post",
+        url: "/backweb/back_dealdata/",
+        cache: false,
+        data: formData,
+        processData: false,
+        contentType: false
+    }).done(function (res) {
+    }).fail(function (res) { });
+
+}
+
+
+

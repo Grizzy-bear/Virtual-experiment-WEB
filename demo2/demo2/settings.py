@@ -130,9 +130,10 @@ STATICFILES_DIRS = [
 
 
 ]
-    # os.path.join(BASE_DIR,"frontlogin", 'static/'),
-    # os.path.join(BASE_DIR, "frontweb",'static/'),
-    # os.path.join(BASE_DIR,"backlogin", 'static/'),
-    # os.path.join(BASE_DIR, "backweb",'static/'),
+# os.path.join(BASE_DIR,"frontlogin", 'static/'),
+# os.path.join(BASE_DIR, "frontweb",'static/'),
+# os.path.join(BASE_DIR,"backlogin", 'static/'),
+# os.path.join(BASE_DIR, "backweb",'static/'),
 # 登陆限制
-LOGIN_URL = '/backlogin/login/' 
+LOGIN_URL = '/backlogin/login/'
+# accessory_dir = BASE_DIR + 'source '

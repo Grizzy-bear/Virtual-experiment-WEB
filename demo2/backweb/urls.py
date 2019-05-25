@@ -10,5 +10,5 @@ urlpatterns = [
     path('redirect_frontlogin/', views.redirect_frontlogin, name='redirect_frontlogin'),
     path('pages_blank/', views.pages_blank, name='pages_blank'),
     path('icon-fontawesome/', views.icon_fontawesome, name='icon_fontawesome'),
-
+    path('back_dealdata/', views.back_dealdata, name='back_dealdata'),
 ]
