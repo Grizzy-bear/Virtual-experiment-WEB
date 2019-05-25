@@ -47,7 +47,7 @@ MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    # 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -134,3 +134,5 @@ STATICFILES_DIRS = [
     # os.path.join(BASE_DIR, "frontweb",'static/'),
     # os.path.join(BASE_DIR,"backlogin", 'static/'),
     # os.path.join(BASE_DIR, "backweb",'static/'),
+# 登陆限制
+LOGIN_URL = '/backlogin/login/' 

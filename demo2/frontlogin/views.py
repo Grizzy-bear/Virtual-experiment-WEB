@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 import random
 
 # Create your views here.
@@ -25,4 +25,25 @@ def login(request):
     word = random.choice(words)
     context = {}
     context['hello'] = word
-    return render(request, 'login/index.html',context)
+    if request.method == 'GET':
+        return render(request, 'login/index.html',context)
+    if request.method == 'POST':
+        user = request.POST.get('form-username')
+        pwd = request.POST.get('form-password')
+        # if request.POST['dbsx']
+        # user = UserInfo(request.POST).user
+        # pwd = UserInfo(request.POST).pwd
+        if user == '201502820' and pwd == '201502820':
+            print(user, pwd)
+            # return redirect('https://www.baidu.com')
+            # return redirect(reverse('Backlogin:login_redirect'))
+            return HttpResponseRedirect('/frontweb/front') 
+        else:
+            return HttpResponse("请先登陆")
+
+def redirect_frontlogin(request):
+    # return render(request, 'login/index.html',context)
+    return HttpResponseRedirect('/frontlogin/login') 
+
+def redirect_frontweb(request):
+    pass

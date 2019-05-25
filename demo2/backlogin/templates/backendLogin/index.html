@@ -19,7 +19,7 @@
 	<!-- Custom Theme files -->
 	<link rel="stylesheet" type="text/css" media="all" href="/static/css/backloginstyle.css" />
 	<link rel="stylesheet" type="text/css" media="all" href="/static/css/backloginnew.css" />
-	
+
 
 </head>
 
@@ -28,23 +28,30 @@
 		<h2>后台登陆界面</h2>
 		<div class="login-top">
 			<h1>登陆菜单</h1>
-			<form>
-				<input type="text" value="User Id" onfocus="this.value = '';"
-					onblur="if (this.value == '') {this.value = 'User Id';}">
-				<input type="password" value="password" onfocus="this.value = '';"
-					onblur="if (this.value == '') {this.value = 'password';}">
-			</form>
-			<div class="forgot">
-				<a href="#">忘记密码</a>
-				<input type="submit" value="登陆">
-			</div>
+			
+				<form action="" method="post" enctype="multipart/form-data">
+					{% csrf_token %}
+					<input type="text"  placeholder="User Id" name="user">
+					<!-- <input type="text" value="User Id" onfocus="this.value = '';"
+						onblur="if (this.value == '') {this.value = 'User Id';}" name="user"> -->
+					<input type="password"  placeholder="Password" name="password">
+					<!-- <input type="password" value="password" onfocus="this.value = '';"
+						onblur="if (this.value == '') {this.value = 'password';}" name="password"> -->
+	
+					<div class="forgot">
+						<a href="#">忘记密码</a>
+						<input type="submit" value="登陆">
+					</div>
+				</form>
+			
 		</div>
 		<div class="login-bottom">
 			<!-- <h3>New User &nbsp;<a href="#">Register</a>&nbsp Here</h3> -->
 		</div>
 	</div>
 	<div class="copyright">
-		<p>Copyright &copy; 2019.Company name All rights reserved.<a target="_blank" href="http://www.yangtzeu.edu.cn"></a>
+		<p>Copyright &copy; 2019.Company name All rights reserved.<a target="_blank"
+				href="http://www.yangtzeu.edu.cn"></a>
 			长江大学</p>
 	</div>
 

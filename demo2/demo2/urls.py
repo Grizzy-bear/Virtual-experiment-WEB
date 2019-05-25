@@ -20,12 +20,13 @@ from django.urls import path,include
 # from backend import views
 # from backendLogin import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('frontlogin/',include('frontlogin.urls') ),
-    path('frontweb/', include('frontweb.urls')),
-    path('backlogin/',include('backlogin.urls')),
-    path('backweb/',include('backweb.urls')),
+    path('frontlogin/',include('frontlogin.urls', namespace='Frontlogin') ),
+    path('frontweb/', include('frontweb.urls', namespace='Frontweb')),
+    path('backlogin/',include('backlogin.urls', namespace='Backlogin')),
+    path('backweb/',include('backweb.urls', namespace='Backweb')),
 
 ]
     # path('show/',include('frontweb.urls') ),

@@ -11,6 +11,10 @@ def back(request):
 
 def back_table(request):
     return render(request, 'backend/table-basic.html')
+
+def redirect_frontlogin(request):
+    print("goodsssss!!!")
+
 def pages_blank(request):
     return render(request, 'backend/pages-blank.html')
 def icon_fontawesome(request):
