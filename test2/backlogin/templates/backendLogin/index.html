@@ -1,0 +1,61 @@
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html lang="en">
+
+
+<head>
+	<title>虚拟实验后端登陆界面</title>
+
+	<!-- Custom Theme files -->
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="" />
+	<!--Google Fonts-->
+	<!-- <link href='http://fonts.useso.com/css?family=Roboto:500,900italic,900,400italic,100,700italic,300,700,500italic,100italic,300italic,400' rel='stylesheet' type='text/css'>
+<link href='http://fonts.useso.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
+	<!--Google Fonts-->
+
+	<!-- Custom Theme files -->
+	<link rel="stylesheet" type="text/css" media="all" href="/static/css/backloginstyle.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="/static/css/backloginnew.css" />
+
+
+</head>
+
+<body>
+	<div class="login">
+		<h2>后台登陆界面</h2>
+		<div class="login-top">
+			<h1>登陆菜单</h1>
+			
+				<form action="" method="post" enctype="multipart/form-data">
+					{% csrf_token %}
+					<input type="text"  placeholder="User Id" name="user">
+					<!-- <input type="text" value="User Id" onfocus="this.value = '';"
+						onblur="if (this.value == '') {this.value = 'User Id';}" name="user"> -->
+					<input type="password"  placeholder="Password" name="password">
+					<!-- <input type="password" value="password" onfocus="this.value = '';"
+						onblur="if (this.value == '') {this.value = 'password';}" name="password"> -->
+	
+					<div class="forgot">
+						<a href="{% url 'page404:page_404' %}">忘记密码</a>
+						<input type="submit" value="登陆">
+					</div>
+				</form>
+			
+		</div>
+		<div class="login-bottom">
+			<!-- <h3>New User &nbsp;<a href="#">Register</a>&nbsp Here</h3> -->
+		</div>
+	</div>
+	<div class="copyright">
+		<p>Copyright &copy; 2019.Company name All rights reserved.<a target="_blank"
+				href="http://www.yangtzeu.edu.cn"></a>
+			长江大学</p>
+	</div>
+
+
+</body>
+
+</html>

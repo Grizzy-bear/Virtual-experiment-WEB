@@ -1,0 +1,12 @@
+.logo-style{
+    transform: scale(0.1)
+}
+.inner-bg{
+    padding-top: 200px;
+}
+body > div.inner-bg > div > div:nth-child(1) > div > h1 {
+ color: #f5f5f7;
+}
+body > div.inner-bg > div > div:nth-child(1) > div > div > p{
+    color: #fff6f6
+}
