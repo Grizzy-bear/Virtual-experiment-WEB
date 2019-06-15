@@ -23,3 +23,4 @@ NO，说来惭愧，我对这个项目主题并无多少兴趣，对这个项目
 
 #### 项目展示
 
+![pic](https://github.com/Grizzy-bear/Virtual-experiment-WEB/blob/master/img/introduce.jpg)
